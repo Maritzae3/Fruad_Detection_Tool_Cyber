@@ -1,7 +1,7 @@
 import pandas as pd
 
 #Loading the data below
-bank_data = pd.read_csv('fraud_dataset_200_rows_final.csv')
+bank_data = pd.read_csv('./Data/fraud_dataset_200_rows_final.csv')
 
 #preparing the data below
 bank_data['timestamp'] = pd.to_datetime(bank_data['timestamp'])
