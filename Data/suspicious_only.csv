@@ -1,0 +1,48 @@
+Transaction ID,Account ID,Transaction Amount,Location,Time and Date,Device Type,Transaction Type,Status,Reason
+1,ACC2000,12000,"Miami, FL, US",2026-04-15 08:00:00,DEV337,wire,Suspicious,"Transaction amount is over $10,000; Large Transfer; Unusual spending; "
+2,ACC2001,9999,"Chicago, IL, US",2026-04-15 08:05:00,DEV133,transfer,Suspicious,"The transaction is near $10,000.(structured transaction); Large Transfer; Unusual spending; "
+3,ACC2002,15000,"Miami, FL, US",2026-04-15 08:10:00,DEV474,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+8,ACC2007,78,"Miami, FL, US",2026-04-15 08:35:00,DEV480,purchase,Suspicious,Logins from unknown devices; 
+9,ACC2008,20000,"Chicago, IL, US",2026-04-15 08:40:00,DEV633,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+26,ACC2025,12000,"Chicago, IL, US",2026-04-15 10:05:00,DEV886,wire,Suspicious,"Transaction amount is over $10,000; Large Transfer; Unusual spending; "
+27,ACC2026,9999,"Los Angeles, CA, US",2026-04-15 10:10:00,DEV948,transfer,Suspicious,"The transaction is near $10,000.(structured transaction); Large Transfer; Unusual spending; "
+28,ACC2027,15000,"San Diego, CA, US",2026-04-15 10:15:00,DEV84,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+33,ACC2032,347,"San Diego, CA, US",2026-04-15 10:40:00,DEV806,purchase,Suspicious,Logins from unknown devices; 
+34,ACC2033,20000,,2026-04-15 10:45:00,DEV229,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+51,ACC2050,12000,"Los Angeles, CA, US",2026-04-15 12:10:00,DEV555,wire,Suspicious,"Transaction amount is over $10,000; Large Transfer; Unusual spending; "
+52,ACC2051,9999,"San Diego, CA, US",2026-04-15 12:15:00,DEV584,transfer,Suspicious,"The transaction is near $10,000.(structured transaction); Large Transfer; Unusual spending; "
+53,ACC2052,15000,"Seattle, WA, US",2026-04-15 12:20:00,DEV836,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+58,ACC2057,301,"Houston, TX, US",2026-04-15 12:45:00,DEV906,purchase,Suspicious,Logins from unknown devices; 
+59,ACC2058,20000,"San Diego, CA, US",2026-04-15 12:50:00,DEV142,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+69,ACC2068,409,"San Francisco, CA, US",2026-04-15 13:40:00,DEV303,purchase,Suspicious,Unusual spending; 
+76,ACC2075,12000,,2026-04-15 14:15:00,DEV840,wire,Suspicious,"Transaction amount is over $10,000; Large Transfer; Unusual spending; "
+77,ACC2076,9999,"Houston, TX, US",2026-04-15 14:20:00,DEV550,transfer,Suspicious,"The transaction is near $10,000.(structured transaction); Large Transfer; Unusual spending; "
+78,ACC2077,15000,"San Francisco, CA, US",2026-04-15 14:25:00,DEV188,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+83,ACC2082,200,"New York, NY, US",2026-04-15 14:50:00,DEV40,purchase,Suspicious,Logins from unknown devices; 
+84,ACC2083,20000,"New York, NY, US",2026-04-15 14:55:00,DEV423,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+90,ACC2089,487,"Phoenix, AZ, US",2026-04-15 15:25:00,DEV744,purchase,Suspicious,Unusual spending; 
+91,ACC2090,437,"San Diego, CA, US",2026-04-15 15:30:00,DEV776,purchase,Suspicious,Unusual spending; 
+101,ACC2100,12000,"San Francisco, CA, US",2026-04-15 16:20:00,DEV667,wire,Suspicious,"Transaction amount is over $10,000; Large Transfer; Unusual spending; "
+102,ACC2101,9999,"San Diego, CA, US",2026-04-15 16:25:00,DEV242,transfer,Suspicious,"The transaction is near $10,000.(structured transaction); Large Transfer; Unusual spending; "
+103,ACC2102,15000,"Chicago, IL, US",2026-04-15 16:30:00,DEV607,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+108,ACC2107,398,,2026-04-15 16:55:00,DEV700,purchase,Suspicious,Logins from unknown devices; 
+109,ACC2108,20000,,2026-04-15 17:00:00,DEV21,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+126,ACC2125,12000,"Chicago, IL, US",2026-04-15 18:25:00,DEV729,wire,Suspicious,"Transaction amount is over $10,000; Large Transfer; Unusual spending; "
+127,ACC2126,9999,"Chicago, IL, US",2026-04-15 18:30:00,DEV20,transfer,Suspicious,"The transaction is near $10,000.(structured transaction); Large Transfer; Unusual spending; "
+128,ACC2127,15000,,2026-04-15 18:35:00,DEV698,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+133,ACC2132,262,"San Diego, CA, US",2026-04-15 19:00:00,DEV560,purchase,Suspicious,Logins from unknown devices; 
+134,ACC2133,20000,,2026-04-15 19:05:00,DEV318,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+148,ACC2147,429,,2026-04-15 20:15:00,DEV696,purchase,Suspicious,Unusual spending; 
+151,ACC2150,12000,"New York, NY, US",2026-04-15 20:30:00,DEV608,wire,Suspicious,"Transaction amount is over $10,000; Large Transfer; Unusual spending; "
+152,ACC2151,9999,"San Francisco, CA, US",2026-04-15 20:35:00,DEV535,transfer,Suspicious,"The transaction is near $10,000.(structured transaction); Large Transfer; Unusual spending; "
+153,ACC2152,15000,"Boston, MA, US",2026-04-15 20:40:00,DEV55,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+158,ACC2157,422,"Houston, TX, US",2026-04-15 21:05:00,DEV649,purchase,Suspicious,Logins from unknown devices; 
+159,ACC2158,20000,,2026-04-15 21:10:00,DEV422,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+170,ACC2169,417,"Los Angeles, CA, US",2026-04-15 22:05:00,DEV353,purchase,Suspicious,Unusual spending; 
+176,ACC2175,12000,"San Diego, CA, US",2026-04-15 22:35:00,DEV163,wire,Suspicious,"Transaction amount is over $10,000; Large Transfer; Unusual spending; "
+177,ACC2176,9999,"San Diego, CA, US",2026-04-15 22:40:00,DEV499,transfer,Suspicious,"The transaction is near $10,000.(structured transaction); Large Transfer; Unusual spending; "
+178,ACC2177,15000,"Los Angeles, CA, US",2026-04-15 22:45:00,DEV467,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+183,ACC2182,154,"New York, NY, US",2026-04-15 23:10:00,DEV806,purchase,Suspicious,Logins from unknown devices; 
+184,ACC2183,20000,,2026-04-15 23:15:00,DEV535,purchase,Suspicious,"Transaction amount is over $10,000; Unusual spending; "
+186,ACC2185,431,"New York, NY, US",2026-04-15 23:25:00,DEV810,purchase,Suspicious,Unusual spending; 
+199,ACC2198,446,"Boston, MA, US",2026-04-16 00:30:00,DEV479,purchase,Suspicious,Unusual spending; 
