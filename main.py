@@ -216,3 +216,8 @@ print(suspicious.head(20))
 # save files
 results.to_csv("all_results.csv", index=False)
 suspicious.to_csv("suspicious_only.csv", index=False)
+
+# Danniella M here. adding these lines of code to be able to read it through javascript.
+# js can only take in JSON files
+results.to_json("Data/all_results.json", orient="records")
+suspicious.to_json("Data/suspicious_only.json", orient="records")
