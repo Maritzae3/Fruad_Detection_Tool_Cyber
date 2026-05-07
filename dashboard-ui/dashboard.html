@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fraud Detection Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h2 class="logo">Fraud Detection Tool</h2>
+    <div class="nav-links">
+      <a href="homepage.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="awareness.html">Awareness</a>
+      <a href="">Meet The Team</a>
+    </div>
+  </nav>
+  <div class="dashboard">
+    <header class="dashboard-header">
+      <div>
+        <h1>Fraud Detection Dashboard</h1>
+        <p>Suspicious activity monitoring and fraud analysis</p>
+      </div>
+    </header>
+
+    <section id="kpi-section" class="kpi-section"></section>
+
+    <section class="charts-grid">
+      <div class="card chart-card">
+        <div class="card-header">
+          <h2>Suspicious Activity Trend</h2>
+          <p>Flagged events by day</p>
+        </div>
+        <canvas id="suspiciousTrend"></canvas>
+      </div>
+
+      <div class="card chart-card">
+        <div class="card-header">
+          <h2>Fraud Signal Breakdown</h2>
+          <p>Types of suspicious patterns</p>
+        </div>
+        <canvas id="categoryChart"></canvas>
+      </div>
+
+      <div class="card chart-card">
+        <div class="card-header">
+          <h2>Rule Trigger Frequency</h2>
+          <p>Most common alert reasons</p>
+        </div>
+        <canvas id="ruleChart"></canvas>
+      </div>
+
+      <div class="card chart-card">
+        <div class="card-header">
+          <h2>Severity Distribution</h2>
+          <p>Critical, high, medium, low</p>
+        </div>
+        <canvas id="severityChart"></canvas>
+      </div>
+    </section>
+
+    <section class="card table-card">
+      <div class="card-header table-top">
+        <div>
+          <h2>Alert Queue</h2>
+          <p>Flagged transactions for analyst review</p>
+        </div>
+
+        
+      </div>
+
+      <div class="table-wrapper">
+        <table id="alertTable">
+          <thead>
+            <tr>
+              <th>Transaction ID</th>
+              <th>Account ID</th>
+              <th>Amount</th>
+              <th>Risk Score</th>
+              <th>Severity</th>
+              <th>Location</th>
+              <th>Time</th>
+              <th>Type</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
