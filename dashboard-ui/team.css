@@ -1,0 +1,180 @@
+/* Hero section at the top of the team page */
+.team-hero {
+    padding: 76px 8%;
+    background:
+      radial-gradient(circle at top left, rgba(5, 33, 36, 0.18), transparent 35%),
+      linear-gradient(135deg, #183c40, #25656c);
+    color: white;
+    text-align: center;
+}
+
+/* Keeps the hero text from stretching too wide */
+.team-hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* Main hero heading */
+.team-hero-content h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 0 0 18px;
+}
+
+/* Hero paragraph */
+.team-hero-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #dbeafe;
+    margin: 0;
+}
+
+/* Overall page spacing */
+.team-page {
+    padding: 60px 8% 80px;
+}
+
+/* Intro text before the team cards */
+.team-intro {
+    max-width: 850px;
+    margin: 0 auto 34px;
+    text-align: center;
+}
+
+/* Intro heading */
+.team-intro h2 {
+    font-size: 34px;
+    margin: 0 0 12px;
+    color: #183c40;
+}
+
+/* Intro paragraph */
+.team-intro p {
+    color: #4b5563;
+    line-height: 1.8;
+    font-size: 17px;
+    margin: 0;
+}
+
+/* Grid layout for the 5 team cards */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+/* Individual team member card */
+.team-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+
+
+/* Team member photo */
+.team-photo {
+    width: 132px;
+    height: 132px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #e5e7eb;
+    margin-bottom: 18px;
+    background: #f9fafb;
+}
+
+/* Team member name */
+.team-info h3 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    color: #111827;
+}
+
+/* Role or contribution text */
+.team-role {
+    margin: 0 0 12px;
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Short bio text */
+.team-bio {
+    margin: 0 0 18px;
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* Container for LinkedIn and GitHub buttons */
+.team-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Link button styling */
+.team-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #f4f7fb;
+    color: #183c40;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid #e5e7eb;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* Link hover effect */
+.team-links a:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* Icon size */
+.team-links i {
+    font-size: 16px;
+}
+
+/* Tablet layout */
+@media (max-width: 1050px) {
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(240px, 1fr));
+    }
+
+    .team-hero-content h1 {
+        font-size: 40px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    .team-hero {
+        padding: 56px 24px;
+    }
+
+    .team-page {
+        padding: 44px 24px 64px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .team-hero-content p,
+    .team-intro p {
+        font-size: 16px;
+    }
+}

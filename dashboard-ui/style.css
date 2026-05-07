@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f7fb;
+    background: #ffffff;
     color: #183c40,;
 }
 
@@ -37,6 +37,7 @@ body {
 .card {
     background: #ffffff;
     border-radius: 14px;
+    border: 2px solid #5b959b;
     padding: 18px;
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
 }
