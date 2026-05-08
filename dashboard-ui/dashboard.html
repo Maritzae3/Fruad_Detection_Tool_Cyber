@@ -25,8 +25,9 @@
         <p>Suspicious activity monitoring and fraud analysis</p>
       </div>
     </header>
-    
+
     <section class="charts-grid">
+      <!-- suspicious activity trend card -->
       <div class="flip-card chart-flip-card">
         <div class="flip-card-inner">
 
@@ -50,6 +51,7 @@
         </div>
       </div>
 
+      <!-- fraud signal breakdown -->
       <div class="flip-card chart-flip-card">
         <div class="flip-card-inner">
 
@@ -73,6 +75,7 @@
         </div>
       </div>
 
+      <!-- rule trigger frequency card -->
       <div class="flip-card chart-flip-card">
         <div class="flip-card-inner">
 
@@ -96,6 +99,7 @@
         </div>
       </div>
 
+      <!-- severity distribution card -->
       <div class="flip-card chart-flip-card">
         <div class="flip-card-inner">
 
@@ -118,6 +122,48 @@
 
         </div>
       </div>
+
+
+    <!-- suspicious trends & at what hour they occur -->
+    <div class="flip-card chart-flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front card chart-card">
+          <div class="card-header">
+            <h2>Suspicious Transactions vs Hour</h2>
+            <p>Suspicious activity grouped by hour</p>
+          </div>
+          <canvas id="fraudByHourChart"></canvas>
+        </div>
+
+        <div class="flip-card-back card chart-card">
+          <div class="card-header">
+            <h2>Analysis: Hourly Activity</h2>
+            <p>Suspicious activity peaks around 8 AM, 10 AM, 12 PM, and 2 PM.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Status vs Location -->
+    <div class="flip-card chart-flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front card chart-card">
+          <div class="card-header">
+            <h2>Status vs Location</h2>
+            <p>Suspicious transactions by location</p>
+          </div>
+          <canvas id="locationChart"></canvas>
+        </div>
+
+        <div class="flip-card-back card chart-card">
+          <div class="card-header">
+            <h2>Analysis: Location</h2>
+            <p>High activity appears in San Diego, Chicago, and New York. Some transactions may also have missing locations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     </section>
 
     <section class="card table-card">

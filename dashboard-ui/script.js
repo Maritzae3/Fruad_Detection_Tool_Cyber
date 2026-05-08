@@ -27,6 +27,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         buildFraudSignalChart(suspiciousData);
         buildRuleTriggerChart(suspiciousData);
         buildSeverityChart(suspiciousData);
+
+        // adding these cards for the dashboard
+        buildFraudByHourChart(suspiciousData);
+        buildLocationChart(suspiciousData);
+
         renderAlertTable(suspiciousData);
 
         enableChartCardFlips();
@@ -114,10 +119,10 @@ function buildStatusDonut(data) {
     new Chart(document.getElementById("suspiciousTrend"), {
         type: "doughnut",  // type of chart
         data: {
-        labels: ["Suspicious", "Normal"],  //lables to show in the chart
+        labels: ["Normal", "Suspicious"],  //lables to show in the chart
         datasets: [{
-            data: [suspiciousCount, normalCount],
-            backgroundColor: ["#dc2626", "#00D100"]
+            data: [normalCount, suspiciousCount,],
+            backgroundColor: ["#00D100", "#dc2626"]
         }]
         },
         options: {
@@ -311,4 +316,120 @@ function formatDate(dateString) {
     // new Date() creates a JS date object
     // toLocalString() converts the date into readable format
     return new Date(dateString).toLocaleString();
+}
+
+
+function buildFraudByHourChart(data) {
+
+    // create object holding every hour of the day
+    const hourCounts = {};
+
+    // pre-fill all 24 hours with 0
+    for (let i = 0; i < 24; i++) {
+
+        const label = new Date(2026, 0, 1, i).toLocaleTimeString([], {
+            hour: "numeric",
+            minute: "2-digit"
+        });
+
+        hourCounts[label] = 0;
+    }
+
+    // count suspicious transactions by hour
+    data.forEach(row => {
+        // console.log("Hour counts:", hourCounts); // this was to count how many and at what hours
+
+        const date = new Date(row["Time and Date"]);
+
+        // extract hour only
+        const hour = date.getHours();
+
+        // convert hour into AM/PM label
+        const hourLabel = new Date(2026, 0, 1, hour).toLocaleTimeString([], {
+            hour: "numeric",
+            minute: "2-digit"
+        });
+
+        // increment count
+        hourCounts[hourLabel]++;
+
+    });
+
+    // build chart
+    new Chart(document.getElementById("fraudByHourChart"), {
+
+        type: "bar",
+
+        data: {
+            labels: Object.keys(hourCounts),
+
+            datasets: [{
+                label: "Transactions",
+                data: Object.values(hourCounts),
+                backgroundColor: "#2563eb"
+            }]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+
+            scales: {
+                y: {
+                    beginAtZero: true,
+
+                    suggestedMax: 5,
+
+                    ticks: {
+                        stepSize: 1,
+                        precision: 0
+                    }
+                }
+            }
+        }
+    });
+}
+
+
+function buildLocationChart(data) {
+    const locationCounts = {};
+
+    data.forEach(row => {  // for loop
+        const location = row.Location || "Missing Location";
+
+        locationCounts[location] = (locationCounts[location] || 0) + 1;
+    });
+
+    new Chart(document.getElementById("locationChart"), {
+        type: "bar",
+        data: {
+            labels: Object.keys(locationCounts),
+            datasets: [{
+                label: "Transactions",
+                data: Object.values(locationCounts),
+                backgroundColor: "#2563eb"
+            }]
+        },
+        options: {
+            indexAxis: "y",
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
 }
