@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f7fb;
+    background: #ffffff;
     color: #183c40,;
 }
 
@@ -15,11 +15,13 @@ body {
 
 .dashboard-header {
     margin-bottom: 24px;
+    margin-top: 24px;
 }
 
 .dashboard-header h1 {
     margin: 0 0 6px 0;
     font-size: 32px;
+    color:#183c40
 }
 
 .dashboard-header p {
@@ -37,6 +39,7 @@ body {
 .card {
     background: #ffffff;
     border-radius: 14px;
+    border: 2px solid #5b959b;
     padding: 18px;
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
 }
@@ -51,6 +54,7 @@ body {
 .kpi-card h2 {
     margin: 10px 0 8px;
     font-size: 30px;
+    color:#183c40;
 }
 
 .kpi-card p {
@@ -86,6 +90,7 @@ body {
 .card-header h2 {
     margin: 0 0 4px;
     font-size: 20px;
+    color:#183c40;
 }
 
 .card-header p {
@@ -385,6 +390,77 @@ footer {
     padding: 22px;
 }
 
+/* Logo container */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    font-weight: bold;
+}
+
+/* Logo image */
+.logo-img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* this is to flip the card around and showcase some information on the dashboard */
+.flip-card {
+    background: transparent;
+    perspective: 2000px;
+    min-height: 320px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    min-height: 320px;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    min-height: 320px;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background: #1f6168;
+    color: white;
+
+    /* Center content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* spacing */
+    padding: 24px;
+
+}
+
+.flip-card-back h2 {
+    color: #ffffff;
+}
+
+.flip-card-back p {
+    color: #e5e7eb;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
 /* Responsive */
 @media (max-width: 1050px) {
 .home-hero {
@@ -416,6 +492,8 @@ footer {
     padding: 56px 24px;
 }
 }
+
+
 
 
   
