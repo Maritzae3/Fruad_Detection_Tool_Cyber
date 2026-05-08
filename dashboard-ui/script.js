@@ -29,11 +29,24 @@ document.addEventListener("DOMContentLoaded", async () => {
         buildSeverityChart(suspiciousData);
         renderAlertTable(suspiciousData);
 
+        enableChartCardFlips();
+
     } catch (error) {
         // in case of error, this prints the error message to the console which makes it easy for us to see where it happened
         console.error("Error loading dashboard data:", error);
     }
 });
+
+// adding the card fliping function to allow the cards to flip
+function enableChartCardFlips() {
+    const flipCards = document.querySelectorAll(".flip-card");
+
+    flipCards.forEach(card => {
+        card.addEventListener("click", () => {
+            card.classList.toggle("is-flipped");
+        });
+    });
+}
 
 // this function takes the parameter "reason" text and turns it into an array
 function parseReasons(reason) {

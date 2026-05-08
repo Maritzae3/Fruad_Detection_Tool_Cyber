@@ -8,7 +8,9 @@
 </head>
 <body>
   <nav class="navbar">
-    <h2 class="logo">4 Eyed Detection</h2>
+    <div class="logo">
+      <img src="photos/logo.png" alt="Project Logo" class="logo-img">
+      <span>4 Eyed Detection</span></div>
     <div class="nav-links">
       <a href="homepage.html">Home</a>
       <a href="dashboard.html">Dashboard</a>
@@ -23,40 +25,98 @@
         <p>Suspicious activity monitoring and fraud analysis</p>
       </div>
     </header>
-
-    <section id="kpi-section" class="kpi-section"></section>
-
+    
     <section class="charts-grid">
-      <div class="card chart-card">
-        <div class="card-header">
-          <h2>Suspicious Activity Trend</h2>
-          <p>Flagged events by day</p>
+      <div class="flip-card chart-flip-card">
+        <div class="flip-card-inner">
+
+          <div class="flip-card-front card chart-card">
+            <div class="card-header">
+              <h2>Suspicious Activity Trend</h2>
+              <p>Flagged events by day</p>
+            </div>
+            <canvas id="suspiciousTrend"></canvas>
+          </div>
+
+          <div class="flip-card-back card chart-card">
+            <div class="card-header">
+              <h2>Suspicious Activity Trend</h2>
+              <p>
+                This chart compares suspicious and normal transactions. It helps users quickly see how much activity was flagged compared to normal activity.
+              </p>
+            </div>
+          </div>
+
         </div>
-        <canvas id="suspiciousTrend"></canvas>
       </div>
 
-      <div class="card chart-card">
-        <div class="card-header">
-          <h2>Fraud Signal Breakdown</h2>
-          <p>Types of suspicious patterns</p>
+      <div class="flip-card chart-flip-card">
+        <div class="flip-card-inner">
+
+          <div class="flip-card-front card chart-card">
+            <div class="card-header">
+              <h2>Fraud Signal Breakdown</h2>
+              <p>Types of suspicious patterns</p>
+            </div>
+            <canvas id="categoryChart"></canvas>
+          </div>
+
+          <div class="flip-card-back card chart-card">
+            <div class="card-header">
+              <h2>Fraud Signal Breakdown</h2>
+              <p>
+                This chart groups suspicious activity into fraud signal categories such as unusual spending, large transfers, device changes, or location mismatches.
+              </p>
+            </div>
+          </div>
+
         </div>
-        <canvas id="categoryChart"></canvas>
       </div>
 
-      <div class="card chart-card">
-        <div class="card-header">
-          <h2>Rule Trigger Frequency</h2>
-          <p>Most common alert reasons</p>
+      <div class="flip-card chart-flip-card">
+        <div class="flip-card-inner">
+
+          <div class="flip-card-front card chart-card">
+            <div class="card-header">
+              <h2>Rule Trigger Frequency</h2>
+              <p>Most common alert reasons</p>
+            </div>
+            <canvas id="ruleChart"></canvas>
+          </div>
+
+          <div class="flip-card-back card chart-card">
+            <div class="card-header">
+              <h2>Rule Trigger Frequency</h2>
+              <p>
+                This chart shows which fraud detection rules were triggered most often. It helps identify the most common reasons transactions were flagged.
+              </p>
+            </div>
+          </div>
+
         </div>
-        <canvas id="ruleChart"></canvas>
       </div>
 
-      <div class="card chart-card">
-        <div class="card-header">
-          <h2>Severity Distribution</h2>
-          <p>Critical, high, medium, low</p>
+      <div class="flip-card chart-flip-card">
+        <div class="flip-card-inner">
+
+          <div class="flip-card-front card chart-card">
+            <div class="card-header">
+              <h2>Severity Distribution</h2>
+              <p>Critical, high, medium, low</p>
+            </div>
+            <canvas id="severityChart"></canvas>
+          </div>
+
+          <div class="flip-card-back card chart-card">
+            <div class="card-header">
+              <h2>Severity Distribution</h2>
+              <p>
+                This chart organizes suspicious transactions by severity level. Severity is based on risk score, transaction amount, and suspicious reasons.
+              </p>
+            </div>
+          </div>
+
         </div>
-        <canvas id="severityChart"></canvas>
       </div>
     </section>
 

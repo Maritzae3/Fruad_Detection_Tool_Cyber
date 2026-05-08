@@ -330,3 +330,20 @@ footer {
     flex-direction: column;
 }
 }
+
+/* Logo container */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    font-weight: bold;
+}
+
+/* Logo image */
+.logo-img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
